@@ -7,7 +7,7 @@ This project automates the process of **sending Instagram Reels to a friend** at
 - **Hovers over the Share button** to reveal it.
 - **Searches for a friend's name and selects the first result**.
 - **Clicks the Send button** to share the Reel.
-- **Repeats the process at random time intervals** (10 to 30 minutes).
+- **Repeats the process at random time intervals** (10 to 30 minutes) you can change it later.
 
 ---
 
@@ -17,7 +17,7 @@ This project automates the process of **sending Instagram Reels to a friend** at
 ✅ **Randomized Timers & Cursor Movements**  
 ✅ **Human-like Interaction with Selenium**  
 ✅ **Random Friend Selection & Delay Handling**  
-
+note : its still risky and you account might get violation and on worst case it might get banned if you account got caught by the instagram anti bot system
 ---
 
 ## 🔧 Installation
@@ -27,13 +27,15 @@ Make sure you have **Python 3.8+** installed. Then, install the required librari
 
 ```sh
 pip install selenium webdriver-manager pyautogui
-
+```
 2️⃣ Download ChromeDriver
 You need to download ChromeDriver that matches your Chrome version.
+although i have shared the old example version of the exe it doesent matter even it has slight diffrence if few version on decimal.
 Find your Chrome version:
 Open Chrome → Go to Settings → About Chrome.
 Download the matching ChromeDriver from this link.
 Extract and move chromedriver.exe to a known location (e.g., C:\ChromeDriver\).
+
 
 2️⃣ Download ChromeDriver
 You need to download ChromeDriver that matches your Chrome version.
@@ -44,15 +46,22 @@ Extract and move chromedriver.exe to a known location (e.g., C:\ChromeDriver\).
 
 3️⃣ Configure the Script
 Open the script and update these variables with your Instagram details:
+you can cheack the selinum chromdrive working or not using the main.py script i shared on above files and check weather its working or not.
+as i shared the script named python auto tes use it to configure any furthur changes.
+
 python:-
+```
 USERNAME = "your_instagram_username"
 PASSWORD = "your_instagram_password"
 REEL_URL = "https://www.instagram.com/reel/example_reel_id/"  # Replace with your reel URL
 FRIEND_USERNAME = "friend_username_here"  # Replace with your friend's username
+```
 Also, update the path to ChromeDriver in the script:
-python;-
-chrome_driver_path = "C:\\ChromeDriver\\chromedriver.exe"  # Update with actual location
 
+python;-
+```
+chrome_driver_path = "C:\\ChromeDriver\\chromedriver.exe"  # Update with actual location
+```
 
 🚀 Running the Script
 Run the script using:
@@ -71,7 +80,9 @@ Wait for a random time (10-30 mins) and repeat.
 ❌ NoSuchElementException: Share button not found
 Try increasing the scroll amount in the script:
 python code:-
+```
 driver.execute_script("window.scrollTo(0, 1000);")
+```
 ❌ ChromeDriver Version Mismatch
 Download the correct ChromeDriver version for your Chrome.
 ❌ Instagram Blocks the Bot
@@ -93,6 +104,7 @@ Feel free to fork this repo and submit pull requests if you improve the script!
    git add README.md
    git commit -m "Added README documentation"
    git push origin main
+   
 Check it on GitHub 🎉
 Let me know if you want any modifications! 🚀😊
 
